@@ -1,0 +1,39 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+df_bc = pd.read_csv("BCS_ann.csv")
+print(df_bc)
+df_bp = pd.read_csv("BP_ann.csv")
+print(df_bp)
+df_vod = pd.read_csv("VOD_ann.csv")
+print(df_vod)
+df_tsco = pd.read_csv("TSCO_ann.csv")
+print(df_tsco)
+df_bc = pd.read_csv("BCS_ann.csv")
+print(df_bc)
+df_bp = pd.read_csv("BP_ann.csv")
+print(df_bp)
+df_vod = pd.read_csv("VOD_ann.csv")
+print(df_vod)
+df_tsco = pd.read_csv("TSCO_ann.csv")
+print(df_tsco)
+
+
+a = [["bc", 33367],
+            ["bp", 68785],
+            ["tesco", 20989],
+            ["voda", 29741]]
+# convert to dataframe
+df_a = pd.DataFrame(data=a,
+                 columns=("company","money"))
+
+plt.figure()
+plt.pie(df_a["money"],labels=df_a["company"])
+plt.show()
+
+print(df_a)
+plt.figure()
+plt.boxplot([df_bc["price"],df_bp["price"],df_vod["price"],df_tsco["price"]])
+plt.ylabel("price")
+plt.show()
