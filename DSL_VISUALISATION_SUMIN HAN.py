@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 # Loading the dataset
 df = pd.read_csv("Sales.csv")
-print( df.head () )
+print(df.head())
 
 
 # 1. Drawing a line plot representing the total sales volume by hour (time slot) for both genders. 
